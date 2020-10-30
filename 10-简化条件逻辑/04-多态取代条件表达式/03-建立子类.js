@@ -78,7 +78,7 @@ class ExperiencedChinaRating extends Rating {
 
 // 建立工厂函数，返回变体类
 function createRating(voyage, history) {
-  if (this.voyage.zone === 'china' && this.history.some((v) => 'china' === v.zone)) {
+  if (voyage.zone === 'china' && history.some((v) => 'china' === v.zone)) {
     return new ExperiencedChinaRating(voyage, history);
   } else {
     return new Rating(voyage, history);
@@ -89,3 +89,11 @@ function createRating(voyage, history) {
 function rating(voyage, history) {
   return createRating(voyage, history).value;
 }
+const voyage = { zone: 'west-indies', length: 10 }
+const history = [
+	{ zone: 'east-indies', profit: 5 },
+	{ zone: 'west-indies', profit: 15 },
+	{ zone: 'china', profit: -2 },
+	{ zone: 'west-africa', profit: 7 },
+]
+console.log(rating(voyage, history));

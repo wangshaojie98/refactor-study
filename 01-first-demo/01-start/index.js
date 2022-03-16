@@ -15,6 +15,7 @@ function statement(invoice, plays) {
 		currency: 'USD',
 		minimumFractionDigits: 2
   }).format;
+	
   console.log(invoice);
 	for (let perf of invoice.performances) {
 		const play = plays[perf.playID];

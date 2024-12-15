@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",           // 或 "NodeNext"
+    "target": "ESNext",
+    "moduleResolution": "Node",  // 或 "NodeNext"
+    "resolveJsonModule": true,
+    "esModuleInterop": true,     // 推荐开启
+    "skipLibCheck": true,        // 可选，跳过类型检查以提高性能
+    "strict": true               // 可选，启用严格模式
+  }
+}
